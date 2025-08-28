@@ -117,7 +117,7 @@ const goTo = (index, ctx) => {
   const { resultItem } = ctx;
 
   // List of result items
-  const results = ctx.list.getElementsByTagName(resultItem.tag);
+  let results = ctx.list.getElementsByTagName(resultItem.tag);
   results = [...results].filter(r => r.getAttribute("aria-disabled") !== "true");
   // Selected result item Classes
   const cls = resultItem.selected ? resultItem.selected.split(" ") : false;
